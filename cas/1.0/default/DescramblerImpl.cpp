@@ -188,6 +188,7 @@ Return<void> DescramblerImpl::descramble(
             dstOffset,
             NULL);
 
+    holder.reset();
     _hidl_cb(toStatus(result >= 0 ? OK : result), result, NULL);
     return Void();
 }
